@@ -1,2 +1,42 @@
-# LK-Auto-Forward-Bot
- Custom Telegram Forwarder Bot with Watermarking Feature  This bot is designed to automate the forwarding of messages from a source Telegram channel to one or more destination channels. It's equipped with advanced features including URL extraction, caption modification, and a sophisticated watermarking functionality for media files. The bot is ideal for content creators, businesses, or any Telegram channel administrators looking to maintain brand consistency and protect their original content while distributing it across multiple channels.  Key Features:  Message Forwarding: Automatically forwards messages from a designated source channel to specified destination channels, ensuring that content reaches a broader audience seamlessly.  Watermarking: Adds a customizable watermark to images, videos, and GIFs before forwarding. This feature helps protect the original content and enhance brand visibility across Telegram channels.  Caption Modification: Allows for dynamic modification of captions, including the ability to insert URLs dynamically. This is particularly useful for adding call-to-actions or references within forwarded content.  Link Extraction: Automatically detects and extracts URLs from messages, enabling the bot to handle and potentially modify them according to specific needs, such as shortening URLs or embedding them within modified captions.  Flexible Configuration: The bot's settings, including the source channel, destination channels, watermark details (like URL and positioning), and other features, can be configured and adjusted dynamically, offering a high degree of customization.  Privacy and Security: Designed with privacy in mind, the bot does not store media on the server longer than necessary. Media files are deleted immediately after the watermarking process and forwarding are completed.  Usage Scenarios:  Content Syndication: For content creators looking to distribute their content across multiple channels without manually reposting to each one.  Brand Promotion: Businesses can use the bot to maintain a consistent brand image by applying watermarks to their content before distribution.  Information Dissemination: Ideal for news outlets or informational channels that need to quickly and efficiently spread information to various audience segments.
+# Custom Telegram Forwarder Bot with Watermarking Feature
+
+This bot is a versatile Telegram automation tool designed for content creators, businesses, or channel administrators. It automates message forwarding from a source channel to multiple destination channels, with advanced features like watermarking, caption modification, and URL extraction.
+
+## Key Features
+
+- **Automated Message Forwarding**: Seamlessly forwards messages from a specified source channel to one or more destination channels.
+- **Dynamic Watermarking**: Automatically applies a customizable watermark to media files (images, videos, GIFs) before forwarding, helping to protect and brand your content.
+- **Caption Modification**: Offers the ability to dynamically modify message captions, perfect for inserting call-to-actions or other important links.
+- **URL Extraction**: Detects URLs within messages, allowing for potential modifications or analytics tracking.
+- **Configurable Settings**: Flexible settings for specifying source and destination channels, watermark details, and other operational parameters.
+- **Privacy-Focused**: Does not store media longer than necessary, ensuring forwarded content is handled securely and efficiently.
+
+## Usage Scenarios
+
+- **Content Syndication**: Ideal for creators wanting to distribute their content across multiple channels without manual reposting.
+- **Brand Promotion**: Businesses can ensure consistent brand presence across Telegram channels by using watermarked content.
+- **Information Dissemination**: Perfect for news outlets or informational channels that aim to spread information quickly to diverse audience segments.
+
+## Getting Started
+
+1. **Configure the Bot**: Set up your bot's source channel, destination channels, and watermark settings according to your needs.
+2. **Deploy the Bot**: Run your bot on your preferred server or hosting service.
+3. **Monitor and Adjust**: Keep an eye on your bot's activity. Adjust configurations as needed to optimize performance.
+
+## Configuration
+
+Adjust the bot's settings by editing the `channel_settings.json` file or through specific commands to dynamically change its behavior.
+
+Example `channel_settings.json`:
+
+```json
+{
+  "source_channel": "-100xxxxxxxxxx",
+  "destination_channels": ["-100xxxxxxxxxx", "@channelusername"],
+  "forwarding_active": true,
+  "link_only": false,
+  "modify_caption": true,
+  "caption_format": "This is my caption \\n{link}\\n\\nAnother caption",
+  "watermark_enabled": true,
+  "watermark_url": "https://example.com/path/to/watermark.png"
+}
